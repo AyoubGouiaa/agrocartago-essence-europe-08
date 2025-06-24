@@ -41,11 +41,14 @@ const Hero = () => {
             src={image}
             alt={`Mediterranean landscape ${index + 1}`}
             className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${
-              index === currentImageIndex ? 'opacity-30' : 'opacity-0'
+              index === currentImageIndex ? 'opacity-60' : 'opacity-0'
             }`}
           />
         ))}
       </div>
+
+      {/* Add a dark overlay to improve text readability */}
+      <div className="absolute inset-0 z-5 bg-black/20"></div>
 
       {/* Slideshow Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
