@@ -1,8 +1,28 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useState, useEffect } from 'react';
 
 const Hero = () => {
   const { t } = useLanguage();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const backgroundImages = [
+    "https://images.unsplash.com/photo-1566737236500-c8ac43014a8e?w=1200", // Mediterranean landscape
+    "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200", // Olive groves
+    "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200", // Mediterranean coast
+    "https://images.unsplash.com/photo-1544467645-89851d41fd0c?w=1200", // Tuscan hills
+    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200", // Mediterranean villa
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        (prevIndex + 1) % backgroundImages.length
+      );
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [backgroundImages.length]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -13,13 +33,33 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-yellow-50">
-      {/* Background Image - using a more vibrant Mediterranean landscape */}
+      {/* Slideshow Background */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1566737236500-c8ac43014a8e?w=1200"
-          alt="Mediterranean landscape"
-          className="w-full h-full object-cover opacity-30"
-        />
+        {backgroundImages.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`Mediterranean landscape ${index + 1}`}
+            className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${
+              index === currentImageIndex ? 'opacity-30' : 'opacity-0'
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Slideshow Indicators */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+        {backgroundImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentImageIndex(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentImageIndex 
+                ? 'bg-white shadow-lg' 
+                : 'bg-white/50 hover:bg-white/75'
+            }`}
+          />
+        ))}
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
