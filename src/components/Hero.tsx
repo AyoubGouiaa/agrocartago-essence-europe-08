@@ -13,12 +13,12 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-yellow-50">
-      {/* Background Image */}
+      {/* Background Image - using a more vibrant Mediterranean landscape */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1500673922987-e212871fec22?w=1200"
+          src="https://images.unsplash.com/photo-1566737236500-c8ac43014a8e?w=1200"
           alt="Mediterranean landscape"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-30"
         />
       </div>
 
@@ -37,7 +37,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
               onClick={() => scrollToSection('brands')}
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
             >
               {t('hero.discover')}
             </button>

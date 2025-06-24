@@ -2,8 +2,8 @@
 import React, { createContext, useContext, useState } from 'react';
 
 interface LanguageContextType {
-  language: 'en' | 'fr';
-  setLanguage: (lang: 'en' | 'fr') => void;
+  language: 'en' | 'fr' | 'de';
+  setLanguage: (lang: 'en' | 'fr' | 'de') => void;
   t: (key: string) => string;
 }
 
@@ -119,11 +119,66 @@ const translations = {
     'footer.quickLinks': 'Liens Rapides',
     'footer.ourBrands': 'Nos Marques',
     'footer.copyright': '© 2025 Agrocartago. Tous droits réservés.',
+  },
+  de: {
+    // Header
+    'nav.home': 'Startseite',
+    'nav.about': 'Über uns',
+    'nav.contact': 'Kontakt',
+    'nav.marks': 'Unsere Marken',
+    
+    // Hero
+    'hero.title': 'Tunesische Exzellenz,',
+    'hero.subtitle': 'Geteilt mit Europa',
+    'hero.description': 'Entdecken Sie die authentischen Aromen Tunesiens durch unsere Premium-Auswahl an Olivenölen, Harissa und traditionellen Köstlichkeiten',
+    'hero.discover': 'Entdecken Sie alle unsere Marken!',
+    'hero.story': 'Unsere Geschichte',
+    
+    // Brands
+    'brands.title': 'Unsere Premium Tunesischen Marken',
+    'brands.subtitle': 'Entdecken Sie unsere sorgfältig kuratierte Sammlung authentischer tunesischer Produkte',
+    'brands.description': 'Jede unserer Marken erzählt eine Geschichte von Tradition, Qualität und authentischem tunesischem Erbe. Von den goldenen Olivenhainen von Sfax bis zu den Gewürzmärkten von Tunis bringen wir Ihnen die besten Produkte, die über Generationen perfektioniert wurden.',
+    'brands.buyNow': 'Jetzt kaufen!',
+    
+    // Premium Quality
+    'quality.title': 'Premium Qualität',
+    'quality.description': 'Erste Kaltpressung direkt durch mechanische Extraktion für überlegene Qualität.',
+    
+    // Why Choose Us
+    'why.title': 'Warum Agrocartago wählen?',
+    'why.subtitle': 'Wir sind Ihr vertrauensvoller Partner für authentische tunesische Produkte auf europäischen Märkten',
+    'why.premium': 'Premium Qualität',
+    'why.heritage': 'Authentisches Erbe',
+    'why.certified': 'Zertifizierte Produkte',
+    
+    // Stats
+    'stats.years': 'Jahre der Exzellenz',
+    'stats.brands': 'Premium Marken',
+    'stats.countries': 'Europäische Länder',
+    'stats.clients': 'Zufriedene Kunden',
+    
+    // Discover
+    'discover.title': 'Entdecken',
+    'discover.learnMore': 'Mehr erfahren',
+    'discover.exploreAll': 'Alle Marken erkunden',
+    
+    // Story
+    'story.title': 'Unsere Geschichte, Verwurzelt im Mittelmeer',
+    'story.readMore': 'Weiterlesen',
+    
+    // Partners
+    'partners.title': 'Unsere Partner',
+    
+    // Footer
+    'footer.slogan': 'Die besten tunesischen Aromen nach Europa bringen',
+    'footer.quickLinks': 'Schnelle Links',
+    'footer.ourBrands': 'Unsere Marken',
+    'footer.copyright': '© 2025 Agrocartago. Alle Rechte vorbehalten.',
   }
 };
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<'en' | 'fr'>('en');
+  const [language, setLanguage] = useState<'en' | 'fr' | 'de'>('en');
 
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations['en']] || key;
