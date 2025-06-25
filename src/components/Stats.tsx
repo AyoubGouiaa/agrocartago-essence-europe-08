@@ -5,10 +5,10 @@ const Stats = () => {
   const { t } = useLanguage();
 
   const stats = [
-    { number: "15+", label: `📅 ${t("stats.years")}`, emoji: "🗓️" },
-    { number: "5", label: `🏷️ ${t("stats.brands")}`, emoji: "🏺" },
-    { number: "10+", label: `🌍 ${t("stats.countries")}`, emoji: "🗺️" },
-    { number: "1000+", label: `👥 ${t("stats.clients")}`, emoji: "🤝" },
+    { number: "15+", label: t("stats.years"), emoji: "📅" },
+    { number: "5", label: t("stats.brands"), emoji: "🏺" },
+    { number: "10+", label: t("stats.countries"), emoji: "🌍" },
+    { number: "1000+", label: t("stats.clients"), emoji: "👥" },
   ];
 
   return (

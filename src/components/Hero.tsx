@@ -10,10 +10,7 @@ const Hero = () => {
     "src/components/ui/img/Olive oil.jpg",
     "src/components/ui/img/Harissa.jpg",
     "src/components/ui/img/Date.jpg",
-    "src/components/ui/img/Products.jpg",
     "src/components/ui/img/Olives.jpg",
-    "/lovable-uploads/38d07ceb-968f-4a9b-af0c-c10db74db105.png",
-    "/lovable-uploads/9c61f0d5-e4c4-4440-818a-bd5c571ceb70.png",
   ];
 
   useEffect(() => {
@@ -74,16 +71,16 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-4">
             <span className="bg-gradient-to-r from-white to-[#fccf81] bg-clip-text text-transparent ">
-              🌿 {t("hero.title")} 🇹🇳
+              {t("hero.title")} 🇹🇳
             </span>
             <br />
             <span className="bg-gradient-to-r from-white to-[#fccf81] bg-clip-text text-transparent">
-              ✨ {t("hero.subtitle")} ✨
+              {t("hero.subtitle")}
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
-            🫒 {t("hero.description")} 🌊
+            {t("hero.description")}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -91,13 +88,13 @@ const Hero = () => {
               onClick={() => scrollToSection("brands")}
               className="bg-[#f5b74c] hover:bg-[#a37629] text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
             >
-              🔍 {t("hero.discover")}
+              {t("hero.discover")}
             </button>
             <button
               onClick={() => scrollToSection("story")}
               className="bg-[#de9c2a] hover:bg-[#87601c] text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
             >
-              📖 {t("hero.story")}
+              {t("hero.story")}
             </button>
           </div>
         </div>
