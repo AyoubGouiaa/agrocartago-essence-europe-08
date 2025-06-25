@@ -6,11 +6,11 @@ const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const backgroundImages = [
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1dBWyUGm4BQ1k8B7UC7JBTSfBkRu-zFPb3g&s",
-    "https://www.tatasimplybetter.com/cdn/shop/files/olive_1080x1080_2e1eabf2-2c28-4046-873c-5a9a3ae51a14_2048x2048.jpg?v=1734608321",
-    "https://www.greendna.in/cdn/shop/products/oliveoil_600x.jpg?v=1738823916",
-    "https://www.cateroils.co.uk/wp-content/uploads/2022/01/olives-with-olive-oil.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtW5JJ8Y6RQjbB9Ic8DrbB3AKJEwjN7_dBpQ&s",
+    "src/components/ui/img/Olive oil.jpg",
+    "src/components/ui/img/Harissa.jpg",
+    "src/components/ui/img/Date.jpg",
+    "src/components/ui/img/Products.jpg",
+    "src/components/ui/img/Olives.jpg",
   ];
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const Hero = () => {
             src={image}
             alt={`Mediterranean landscape ${index + 1}`}
             className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${
-              index === currentImageIndex ? "opacity-60" : "opacity-0"
+              index === currentImageIndex ? "opacity-90" : "opacity-0"
             }`}
           />
         ))}
@@ -70,25 +70,29 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-4">
-            <span className="text-green-800">{t("hero.title")}</span>
+            <span className="bg-gradient-to-r from-white to-[#fccf81] bg-clip-text text-transparent ">
+              {t("hero.title")}
+            </span>
             <br />
-            <span className="text-yellow-600">{t("hero.subtitle")}</span>
+            <span className="bg-gradient-to-r from-white to-[#fccf81] bg-clip-text text-transparent">
+              {t("hero.subtitle")}
+            </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
             {t("hero.description")}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
               onClick={() => scrollToSection("brands")}
-              className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              className="bg-[#f5b74c] hover:bg-[#a37629] text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
             >
               {t("hero.discover")}
             </button>
             <button
               onClick={() => scrollToSection("story")}
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              className="bg-[#de9c2a] hover:bg-[#87601c] text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
             >
               {t("hero.story")}
             </button>
