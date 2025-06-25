@@ -35,13 +35,13 @@ const Brands = () => {
           {/* Left Content */}
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              {t('brands.title')}
+              🏺 {t('brands.title')} 🌿
             </h2>
             <p className="text-xl text-green-600 mb-6">
-              {t('brands.subtitle')}
+              ✨ {t('brands.subtitle')} ✨
             </p>
             <p className="text-gray-700 text-lg leading-relaxed mb-8">
-              {t('brands.description')}
+              🫒 {t('brands.description')} 🇹🇳
             </p>
           </div>
 
@@ -80,7 +80,7 @@ const Brands = () => {
             {/* Buy Now Button */}
             <div className="mt-6 text-center">
               <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                {t('brands.buyNow')}
+                🛒 {t('brands.buyNow')}
               </button>
             </div>
           </div>

@@ -5,10 +5,10 @@ const Partners = () => {
   const { t } = useLanguage();
 
   const partners = [
-    { name: 'Premium Foods EU', logo: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=200' },
-    { name: 'Mediterranean Imports', logo: 'https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?w=200' },
-    { name: 'European Gourmet', logo: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=200' },
-    { name: 'Specialty Foods Co', logo: 'https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?w=200' },
+    { name: '🍽️ Premium Foods EU', logo: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=200' },
+    { name: '🌊 Mediterranean Imports', logo: 'https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?w=200' },
+    { name: '👨‍🍳 European Gourmet', logo: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=200' },
+    { name: '🥘 Specialty Foods Co', logo: 'https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?w=200' },
   ];
 
   return (
@@ -16,7 +16,7 @@ const Partners = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900">
-            {t('partners.title')}
+            🤝 {t('partners.title')} 🌟
           </h2>
         </div>
 

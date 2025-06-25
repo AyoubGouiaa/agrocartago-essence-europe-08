@@ -1,13 +1,14 @@
+
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Stats = () => {
   const { t } = useLanguage();
 
   const stats = [
-    { number: "15+", label: t("stats.years") },
-    { number: "5", label: t("stats.brands") },
-    { number: "10+", label: t("stats.countries") },
-    { number: "1000+", label: t("stats.clients") },
+    { number: "15+", label: `📅 ${t("stats.years")}`, emoji: "🗓️" },
+    { number: "5", label: `🏷️ ${t("stats.brands")}`, emoji: "🏺" },
+    { number: "10+", label: `🌍 ${t("stats.countries")}`, emoji: "🗺️" },
+    { number: "1000+", label: `👥 ${t("stats.clients")}`, emoji: "🤝" },
   ];
 
   return (
@@ -19,6 +20,7 @@ const Stats = () => {
               key={index}
               className="transform hover:scale-105 transition-transform duration-300"
             >
+              <div className="text-4xl mb-2">{stat.emoji}</div>
               <div className="text-4xl md:text-5xl font-bold mb-2 text-yellow-400">
                 {stat.number}
               </div>

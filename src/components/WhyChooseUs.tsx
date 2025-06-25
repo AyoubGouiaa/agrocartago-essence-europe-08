@@ -7,17 +7,17 @@ const WhyChooseUs = () => {
   const features = [
     {
       title: t('why.premium'),
-      description: 'Carefully selected products meeting the highest European standards',
+      description: '🌟 Carefully selected products meeting the highest European standards 🇪🇺',
       icon: '🏆'
     },
     {
       title: t('why.heritage'),
-      description: 'Traditional methods passed down through generations',
+      description: '📿 Traditional methods passed down through generations 👨‍👩‍👧‍👦',
       icon: '🌿'
     },
     {
       title: t('why.certified'),
-      description: 'All products certified for quality and authenticity',
+      description: '🔒 All products certified for quality and authenticity ✅',
       icon: '✅'
     }
   ];
@@ -27,10 +27,10 @@ const WhyChooseUs = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            {t('why.title')}
+            🤝 {t('why.title')} 💫
           </h2>
           <p className="text-xl text-green-600 max-w-3xl mx-auto">
-            {t('why.subtitle')}
+            ✨ {t('why.subtitle')} 🌊
           </p>
         </div>
 

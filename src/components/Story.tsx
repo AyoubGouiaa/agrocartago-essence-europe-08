@@ -1,3 +1,4 @@
+
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Story = () => {
@@ -20,23 +21,23 @@ const Story = () => {
           {/* Right Content */}
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              {t("story.title")}
+              📖 {t("story.title")} 🌅
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Our journey began in the heart of Tunisia, where the Mediterranean
+              🏺 Our journey began in the heart of Tunisia, where the Mediterranean
               sun has blessed our lands for centuries. From the ancient olive
               groves of Sfax to the bustling spice markets of Tunis, we have
               carefully cultivated relationships with local producers who share
-              our passion for authentic, premium quality products.
+              our passion for authentic, premium quality products. 🌿
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Today, we bridge the gap between Tunisia's rich culinary heritage
+              🌊 Today, we bridge the gap between Tunisia's rich culinary heritage
               and Europe's sophisticated markets, bringing you products that
               tell stories of tradition, craftsmanship, and Mediterranean
-              excellence.
+              excellence. ✨
             </p>
             <button className="bg-[#de9c2a] hover:bg-[#87601c] text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-              {t("story.readMore")}
+              📚 {t("story.readMore")}
             </button>
           </div>
         </div>

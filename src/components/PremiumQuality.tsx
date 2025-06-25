@@ -17,10 +17,10 @@ const PremiumQuality = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            {t('quality.title')}
+            🏆 {t('quality.title')} ⭐
           </h2>
           <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
-            {t('quality.description')}
+            🌿 {t('quality.description')} 🫒
           </p>
         </div>
       </div>
