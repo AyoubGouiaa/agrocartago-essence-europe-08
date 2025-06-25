@@ -20,8 +20,23 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   useEffect(() => {
     const root = window.document.documentElement;
+    const body = window.document.body;
+    
+    // Remove existing theme classes
     root.classList.remove('light', 'dark');
+    body.classList.remove('light', 'dark');
+    
+    // Add current theme classes
     root.classList.add(theme);
+    body.classList.add(theme);
+    
+    // Apply background color to body for full page coverage
+    if (theme === 'dark') {
+      body.style.backgroundColor = '#111827'; // gray-900
+    } else {
+      body.style.backgroundColor = '#ffffff';
+    }
+    
     localStorage.setItem('theme', theme);
   }, [theme]);
 

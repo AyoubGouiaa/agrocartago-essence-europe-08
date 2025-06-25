@@ -65,8 +65,8 @@ const Header = () => {
     <header className="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo - moved to far left */}
-          <div className="flex-shrink-0 mr-8">
+          {/* Logo - moved further to the left */}
+          <div className="flex-shrink-0 mr-16">
             <h1 className="text-2xl font-bold text-green-800 dark:text-green-400">Agrocartago</h1>
           </div>
 
