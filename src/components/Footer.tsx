@@ -12,50 +12,56 @@ const Footer = () => {
   };
 
   return (
-    <footer id="footer" className="bg-gray-900 text-white py-16">
+    <footer 
+      id="footer" 
+      className="bg-gray-900 text-white py-16 bg-cover bg-center bg-no-repeat relative"
+      style={{
+        backgroundImage: 'linear-gradient(rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0.9)), url(src/components/ui/img/Products.jpg)'
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Left Column - Slogan */}
           <div>
-            <h3 className="text-2xl font-bold text-green-400 mb-4">Agrocartago</h3>
+            <h3 className="text-2xl font-bold text-green-400 mb-4">🌿 Agrocartago</h3>
             <p className="text-gray-300 text-lg">
-              {t('footer.slogan')}
+              {t('footer.slogan')} 🇹🇳➡️🇪🇺
             </p>
           </div>
 
           {/* Center Column - Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">{t('footer.quickLinks')}</h4>
+            <h4 className="text-lg font-semibold mb-4">🔗 {t('footer.quickLinks')}</h4>
             <div className="space-y-2">
               <button
                 onClick={() => scrollToSection('hero')}
                 className="block text-gray-300 hover:text-green-400 transition-colors"
               >
-                {t('nav.home')}
+                🏠 {t('nav.home')}
               </button>
               <button
                 onClick={() => scrollToSection('story')}
                 className="block text-gray-300 hover:text-green-400 transition-colors"
               >
-                {t('nav.about')}
+                📖 {t('nav.about')}
               </button>
               <button
                 onClick={() => scrollToSection('footer')}
                 className="block text-gray-300 hover:text-green-400 transition-colors"
               >
-                {t('nav.contact')}
+                📧 {t('nav.contact')}
               </button>
             </div>
           </div>
 
           {/* Right Column - Our Brands & Social */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">{t('footer.ourBrands')}</h4>
+            <h4 className="text-lg font-semibold mb-4">🏺 {t('footer.ourBrands')}</h4>
             <div className="space-y-2 mb-6">
-              <p className="text-gray-300">Oleagold</p>
-              <p className="text-gray-300">Harissa Heritage</p>
-              <p className="text-gray-300">Carthago Olives</p>
-              <p className="text-gray-300">Tunis Gold</p>
+              <p className="text-gray-300">🫒 Oleagold</p>
+              <p className="text-gray-300">🌶️ Harissa Heritage</p>
+              <p className="text-gray-300">🌿 Carthago Olives</p>
+              <p className="text-gray-300">✨ Tunis Gold</p>
             </div>
 
             {/* Social Media Icons */}

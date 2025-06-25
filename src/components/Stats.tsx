@@ -5,20 +5,25 @@ const Stats = () => {
   const { t } = useLanguage();
 
   const stats = [
-    { number: "15+", label: t("stats.years"), emoji: "📅" },
+    { number: "15+", label: t("stats.years"), emoji: "🌟" },
     { number: "5", label: t("stats.brands"), emoji: "🏺" },
     { number: "10+", label: t("stats.countries"), emoji: "🌍" },
     { number: "1000+", label: t("stats.clients"), emoji: "👥" },
   ];
 
   return (
-    <section className="py-20 bg-green-800 text-white">
+    <section 
+      className="py-20 bg-green-800 text-white bg-cover bg-center bg-no-repeat relative"
+      style={{
+        backgroundImage: 'linear-gradient(rgba(34, 139, 34, 0.8), rgba(34, 139, 34, 0.8)), url(src/components/ui/img/Products.jpg)'
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="transform hover:scale-105 transition-transform duration-300"
+              className="transform hover:scale-105 transition-transform duration-300 bg-white/10 backdrop-blur-sm rounded-lg p-6"
             >
               <div className="text-4xl mb-2">{stat.emoji}</div>
               <div className="text-4xl md:text-5xl font-bold mb-2 text-yellow-400">
